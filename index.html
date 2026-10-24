@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sepia">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranav S | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Pranav S - KGCAS Student, Second Year, Software Developer based in Kaundampalayam, India.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Ambient background glow & grid overlay -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-monogram">PS</span>
+        <span class="brand-name">Pranav<span class="accent-dot">.</span>S</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active" data-nav="home">Home</a>
+        <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
+        <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+      </nav>
+
+      <!-- Right Nav Controls (Aspect Switcher & GitHub Icon) -->
+      <div class="nav-actions">
+        <!-- Aspect / Color Palette Switcher -->
+        <div class="theme-palette-wrapper">
+          <button class="theme-btn" id="themePickerToggle" aria-label="Change color aspect" title="Change Theme Aspect">
+            <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9 10 10 0 0 0 0-18z"></path>
+              <circle cx="7.5" cy="10.5" r=".5" fill="currentColor"></circle>
+              <circle cx="12" cy="7.5" r=".5" fill="currentColor"></circle>
+              <circle cx="16.5" cy="10.5" r=".5" fill="currentColor"></circle>
+            </svg>
+            <span class="theme-label-current">Aspect</span>
+          </button>
+          
+          <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-dropdown-title">Color Aspect & Mood</div>
+            <button class="theme-option active" data-theme-val="sepia">
+              <span class="color-preview sepia-preview"></span>
+              <span>Sepia Beach (Signature)</span>
+            </button>
+            <button class="theme-option" data-theme-val="cyan">
+              <span class="color-preview cyan-preview"></span>
+              <span>Cyber Cyan</span>
+            </button>
+            <button class="theme-option" data-theme-val="emerald">
+              <span class="color-preview emerald-preview"></span>
+              <span>Emerald Mint</span>
+            </button>
+            <button class="theme-option" data-theme-val="sunset">
+              <span class="color-preview sunset-preview"></span>
+              <span>Solar Amber</span>
+            </button>
+            <button class="theme-option" data-theme-val="violet">
+              <span class="color-preview violet-preview"></span>
+              <span>Neon Violet</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Top GitHub Integration Icon -->
+        <a href="https://github.com/rubixx007?tab=repositories" target="_blank" rel="noopener noreferrer" class="github-nav-btn" aria-label="Pranav S GitHub Repositories" title="Visit GitHub Repositories">
+          <svg class="icon-svg github-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span class="github-btn-text">GitHub</span>
+          <svg class="external-arrow-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-nav-links">
+        <a href="#home" class="mobile-nav-link" data-nav="home">Home</a>
+        <a href="#projects" class="mobile-nav-link" data-nav="projects">Projects</a>
+        <a href="#contact" class="mobile-nav-link" data-nav="contact">Contact</a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <a href="https://github.com/rubixx007?tab=repositories" target="_blank" rel="noopener noreferrer" class="mobile-github-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>github.com/rubixx007</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="container">
+        
+        <!-- Hero Grid: Bio on Left, Photo & Interactive Card on Right -->
+        <div class="hero-grid">
+          
+          <!-- Left Column: Details & Identity -->
+          <div class="hero-content">
+            <div class="badge-pill hero-status-badge">
+              <span class="status-indicator-dot"></span>
+              <span>Available for Software Projects & Tech Collaboration</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hello, I'm <br>
+              <span class="gradient-text hero-name">Pranav S</span>
+            </h1>
+
+            <p class="hero-tagline">
+              Passionate developer crafting robust applications, intuitive systems, and reliable software solutions. Focused on Java engineering, database architectures, and modern web interfaces.
+            </p>
+
+            <!-- Key Info Badges (User specified: KGCAS Student, Second Year, Kaundampalayam India) -->
+            <div class="info-badges-wrapper">
+              <div class="info-badge">
+                <div class="info-badge-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="info-badge-text">
+                  <span class="info-badge-label">Education</span>
+                  <span class="info-badge-value">KGCAS Student</span>
+                </div>
+              </div>
+
+              <div class="info-badge">
+                <div class="info-badge-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <div class="info-badge-text">
+                  <span class="info-badge-label">Academic Year</span>
+                  <span class="info-badge-value">Second Year</span>
+                </div>
+              </div>
+
+              <div class="info-badge">
+                <div class="info-badge-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="info-badge-text">
+                  <span class="info-badge-label">Location</span>
+                  <span class="info-badge-value">Kaundampalayam, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Contact via Gmail</span>
+              </a>
+
+              <a href="https://github.com/rubixx007?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="Explore Repositories">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>rubixx007</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: User Profile Photo with 3D Tilt Frame -->
+          <div class="hero-visual">
+            <div class="tilt-card photo-card" id="heroPhotoCard">
+              <div class="photo-card-inner">
+                <div class="photo-image-wrapper">
+                  <img src="assets/profile.jpg" alt="Pranav S - Developer & KGCAS Student" class="hero-profile-img" loading="eager">
+                  <div class="photo-overlay-gradient"></div>
+                </div>
+                
+                <!-- Floating Info Tag on the photo -->
+                <div class="photo-floating-pill">
+                  <span class="pill-dot"></span>
+                  <div class="pill-content">
+                    <span class="pill-title">Pranav S</span>
+                    <span class="pill-subtitle">KG College of Arts and Science</span>
+                  </div>
+                </div>
+
+                <!-- Floating Code Badge -->
+                <div class="photo-code-badge">
+                  <span class="code-bracket">&lt;</span>
+                  <span class="code-tag">Java / System Dev</span>
+                  <span class="code-bracket">/&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- HIGHLIGHTED PROJECT COMPONENT (Requested on Home Section) -->
+        <div class="home-featured-wrapper">
+          <div class="featured-banner tilt-card" id="homeHighlightCard">
+            <div class="featured-banner-tag">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>HIGHLIGHTED CAPSTONE PROJECT</span>
+            </div>
+
+            <div class="featured-banner-body">
+              <div class="featured-banner-info">
+                <h2 class="featured-banner-title">Hostel Room Allocation & Student Stay Management System</h2>
+                <p class="featured-banner-desc">
+                  An end-to-end management architecture developed to automate room inventory, student accommodation assignment, stay durations, check-in records, and billing oversight.
+                </p>
+                <div class="featured-tech-chips">
+                  <span class="tech-chip">Java</span>
+                  <span class="tech-chip">OOP Design</span>
+                  <span class="tech-chip">MySQL Database</span>
+                  <span class="tech-chip">Capstone Architecture</span>
+                </div>
+              </div>
+
+              <div class="featured-banner-cta">
+                <a href="https://github.com/rubixx007/Java-Final--Capstone-Pranavs" target="_blank" rel="noopener noreferrer" class="btn btn-primary featured-git-btn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Visit on GitHub</span>
+                  <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="#projects" class="btn btn-ghost">
+                  <span>Explore Details</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Engineered Software & Implementations</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">Practical systems and capstone developments focused on real-world workflow automation.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Primary Capstone Card -->
+          <div class="project-card tilt-card primary-project-card" id="capstoneProjectCard">
+            <div class="project-card-header">
+              <div class="project-badge-pill">
+                <span class="project-pill-icon">🏢</span>
+                <span>Java Capstone Project</span>
+              </div>
+              <div class="project-repo-link-wrap">
+                <a href="https://github.com/rubixx007/Java-Final--Capstone-Pranavs" target="_blank" rel="noopener noreferrer" class="icon-circle-link" title="Open Repository on GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Hostel Room Allocation and Student Stay Management System</h3>
+              
+              <p class="project-summary">
+                A structured management software developed in Java designed to eliminate manual registers and spreadsheet errors in student hostels. Built with modular OOP concepts, persistent database handling, and intuitive administrative operations.
+              </p>
+
+              <!-- Feature Highlights List -->
+              <div class="project-feature-list">
+                <div class="feature-item">
+                  <div class="feature-check">✓</div>
+                  <span><strong>Room Allocation Module:</strong> Automated seat/bed capacity calculation and room vacancy detection.</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-check">✓</div>
+                  <span><strong>Student Stay Records:</strong> Tracks student check-in dates, checkout schedules, and stay history logs.</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-check">✓</div>
+                  <span><strong>Fee & Occupancy Oversight:</strong> Administrative monitoring of room occupancy rates and dues.</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-check">✓</div>
+                  <span><strong>Data Reliability:</strong> Structured backend tables preventing double-booking and data inconsistencies.</span>
+                </div>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="project-tech-tags">
+                <span class="tag-badge">Java SE</span>
+                <span class="tag-badge">Object-Oriented Programming</span>
+                <span class="tag-badge">MySQL / Relational DB</span>
+                <span class="tag-badge">CRUD Architecture</span>
+                <span class="tag-badge">Capstone</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <a href="https://github.com/rubixx007/Java-Final--Capstone-Pranavs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Visit on GitHub: Java-Final--Capstone-Pranavs</span>
+                <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <button class="btn btn-secondary btn-block project-specs-btn" id="openSpecsModalBtn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>View System Architecture & Specs</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Card: GitHub Repository Hub Showcase -->
+          <div class="project-card tilt-card github-hub-card">
+            <div class="project-card-header">
+              <div class="project-badge-pill">
+                <span class="project-pill-icon">⚡</span>
+                <span>GitHub Ecosystem</span>
+              </div>
+              <div class="github-badge-tag">@rubixx007</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Explore All GitHub Repositories</h3>
+              <p class="project-summary">
+                Discover more source code repositories, academic submissions, development utilities, and open-source contributions directly on my GitHub profile.
+              </p>
+
+              <!-- Repos showcase metrics -->
+              <div class="github-metrics-grid">
+                <div class="metric-box">
+                  <span class="metric-icon">📂</span>
+                  <span class="metric-val">Repositories</span>
+                  <span class="metric-sub">Full Codebases</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-icon">☕</span>
+                  <span class="metric-val">Java</span>
+                  <span class="metric-sub">Primary Language</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-icon">🌐</span>
+                  <span class="metric-val">Web & UI</span>
+                  <span class="metric-sub">HTML/CSS/JS</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-icon">🎓</span>
+                  <span class="metric-val">KGCAS</span>
+                  <span class="metric-sub">Academic Projects</span>
+                </div>
+              </div>
+
+              <div class="repo-preview-bar">
+                <span class="repo-url-label">URL:</span>
+                <span class="repo-url-text">https://github.com/rubixx007?tab=repositories</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <a href="https://github.com/rubixx007?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Browse All Repositories on GitHub</span>
+                <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH GMAIL TOGGLE -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get in Touch & Connect</span>
+          <h2 class="section-title">Contact & Communication</h2>
+          <p class="section-desc">Reach out directly via Gmail or connect for collaborative projects and inquiries.</p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Left: Information Card -->
+          <div class="contact-info-card tilt-card">
+            <h3 class="contact-card-title">Let's Connect</h3>
+            <p class="contact-card-text">
+              Have an inquiry, project proposition, or want to discuss software engineering? Feel free to write to me anytime.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-detail-info">
+                  <span class="detail-label">Direct Gmail</span>
+                  <a href="mailto:pranavrubix2007@gmail.com" class="detail-val hover-link">pranavrubix2007@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-detail-info">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-val">Kaundampalayam, Coimbatore, India</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-info">
+                  <span class="detail-label">GitHub Profile</span>
+                  <a href="https://github.com/rubixx007" target="_blank" rel="noopener noreferrer" class="detail-val hover-link">github.com/rubixx007</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="contact-detail-info">
+                  <span class="detail-label">Institution</span>
+                  <span class="detail-val">KG College of Arts and Science (Second Year)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: GMAIL INTERACTIVE TOGGLE CARD -->
+          <div class="gmail-interactive-card tilt-card" id="gmailInteractiveCard">
+            
+            <!-- Gmail Toggle Tab Header -->
+            <div class="gmail-toggle-header">
+              <div class="gmail-badge-header">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.273l8.073-5.78C21.691 2.28 24 3.434 24 5.457z"/>
+                </svg>
+                <span class="gmail-badge-title">Gmail Connect Portal</span>
+              </div>
+
+              <!-- Interactive Toggle Selector -->
+              <div class="gmail-mode-toggle" role="tablist">
+                <button class="toggle-tab-btn active" id="tabQuickConnect" role="tab" aria-selected="true">
+                  <span>Quick Connect</span>
+                </button>
+                <button class="toggle-tab-btn" id="tabComposeMsg" role="tab" aria-selected="false">
+                  <span>Direct Compose</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- View 1: Quick Connect Tab Content -->
+            <div class="gmail-tab-content active" id="contentQuickConnect">
+              <div class="email-display-box">
+                <div class="email-display-left">
+                  <span class="email-tag-label">Official Inbox</span>
+                  <span class="email-address-text" id="emailAddressDisplay">pranavrubix2007@gmail.com</span>
+                </div>
+                <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                  <span class="copy-btn-icon" id="copyIcon">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </span>
+                  <span id="copyBtnText">Copy</span>
+                </button>
+              </div>
+
+              <div class="gmail-actions-grid">
+                <!-- Launch Web Gmail with prefilled TO -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pranavrubix2007@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-gmail">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.273l8.073-5.78C21.691 2.28 24 3.434 24 5.457z"/>
+                  </svg>
+                  <span>Open in Gmail (Web)</span>
+                  <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <!-- Native Mailto Launch -->
+                <a href="mailto:pranavrubix2007@gmail.com" class="btn btn-secondary">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Open in Mail App</span>
+                </a>
+              </div>
+
+              <div class="gmail-perks">
+                <div class="perk-item">
+                  <span class="perk-bullet">•</span>
+                  <span>Direct inbox access for inquiries & collaboration</span>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-bullet">•</span>
+                  <span>Typical response time: within 24 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 2: Direct Compose Form Tab Content -->
+            <div class="gmail-tab-content" id="contentComposeMsg">
+              <form class="gmail-compose-form" id="gmailComposeForm" onsubmit="return false;">
+                <div class="form-group">
+                  <label for="composeSubject">Subject</label>
+                  <input type="text" id="composeSubject" class="form-input" placeholder="e.g. Project Collaboration / Portfolio Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="composeMessage">Message</label>
+                  <textarea id="composeMessage" class="form-textarea" rows="4" placeholder="Write your message to Pranav here..." required></textarea>
+                </div>
+
+                <div class="compose-btn-row">
+                  <button type="button" class="btn btn-gmail" id="sendViaGmailBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                      <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.273l8.073-5.78C21.691 2.28 24 3.434 24 5.457z"/>
+                    </svg>
+                    <span>Launch in Gmail</span>
+                    <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-ghost" id="clearComposeBtn">Clear</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Capstone Specs Modal -->
+  <div class="modal-overlay" id="specsModal" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">Architecture & Specifications</span>
+          <h3 class="modal-title">Hostel Room Allocation & Stay Management</h3>
+        </div>
+        <button class="modal-close-btn" id="closeSpecsModalBtn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-spec-section">
+          <h4>Project Overview</h4>
+          <p>
+            Designed as a Java Final Capstone Project by <strong>Pranav S</strong>, this system replaces complex manual records with a reliable object-oriented program to manage student stays, room capacities, and administrative tasks.
+          </p>
+        </div>
+
+        <div class="modal-spec-grid">
+          <div class="modal-spec-item">
+            <span class="spec-name">Primary Technology</span>
+            <span class="spec-value">Java (Core & OOP Framework)</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="spec-name">Database Model</span>
+            <span class="spec-value">Relational Database / MySQL Schema</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="spec-name">Developer / Author</span>
+            <span class="spec-value">Pranav S (KGCAS)</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="spec-name">Repository Status</span>
+            <span class="spec-value">Public on GitHub</span>
+          </div>
+        </div>
+
+        <div class="modal-spec-section">
+          <h4>Key Functional Modules</h4>
+          <ul class="modal-feature-bullets">
+            <li><strong>Room Inventory & Allocation:</strong> Dynamic tracking of single, double, and shared dormitory rooms with automatic availability verification.</li>
+            <li><strong>Student Stay Lifecycle:</strong> Full onboarding, room key registry, check-in timestamps, and departure recording.</li>
+            <li><strong>Conflict Avoidance:</strong> Strict validation constraints preventing accidental room overbooking.</li>
+            <li><strong>Audit & Reporting:</strong> Room occupancy logs accessible for hostel administrators and wardens.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://github.com/rubixx007/Java-Final--Capstone-Pranavs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Open on GitHub</span>
+          <svg class="external-arrow-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <button class="btn btn-secondary" id="closeSpecsModalBtn2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container for Copied/Interactive Actions -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Pranav S</span>
+        <span class="footer-tagline">KGCAS Student • Second Year • Kaundampalayam, India</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/rubixx007?tab=repositories" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub Repositories">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="mailto:pranavrubix2007@gmail.com" class="footer-social-link" title="Direct Email">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Gmail</span>
+        </a>
+
+        <a href="#home" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
